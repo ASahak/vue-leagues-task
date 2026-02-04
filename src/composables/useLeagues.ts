@@ -4,8 +4,6 @@ import { computed, type MaybeRefOrGetter, toValue } from 'vue'
 import api from '@/services/api'
 import QueryFactory from '@/common/constants/queryFactory'
 
-
-
 export const useLeagues = () => {
   return useQuery({
     queryKey: QueryFactory.leagues,
