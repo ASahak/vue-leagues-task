@@ -1,45 +1,26 @@
-# vue-leagues-task
+# Sports Leagues Finder SPA
 
-This template should help get you started developing with Vue 3 in Vite.
+A modern, responsive Single Page Application built as a technical assessment.
 
-## Recommended IDE Setup
+## 🛠 Tech Stack
+- **Vue 3 (Composition API)** with **TypeScript** for type safety.
+- **Vuestic UI**: Used for the component library (Cards, Inputs, Modals).
+- **Pinia**: State management for user filters and search queries.
+- **TanStack Query (Vue Query)**: Advanced server-state management handling automatic **caching** and loading states.
+- **Vite**: Ultra-fast development server and build tool.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🏗 Architecture Decisions
+1. **Component-Based Decomposition**: The app is split into small, single-responsibility components (`LeagueCard`, `BadgeModal`, `LeagueFilters`) to improve testability and readability.
+2. **Server-Side Caching**: Using TanStack Query, we implement the requirement for caching badge responses. Once a badge is fetched for a specific `leagueId`, it is stored in memory and served instantly for subsequent clicks.
+3. **Derived State Management**: Filtering is handled via a `computed` property within a Pinia store. This ensures the UI is always in sync with the search/filter inputs without redundant state variables.
+4. **Responsive Layout**: Utilizing Vuestic’s flex grid system to ensure seamless transitions between mobile (1-column), tablet (2-column), and desktop (3-column) views.
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
+## 🚀 Getting Started
+1. Clone the repository.
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Build for production: `npm run build`
 ## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
 
 ### Lint with [ESLint](https://eslint.org/)
 

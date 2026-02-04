@@ -1,35 +1,39 @@
-@import './base.css';
+:root {
+  /* Backgrounds */
+  --bg-app: #f1f3f5;           /* The soft grey background in your image */
+  --bg-card: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --input-bg: #ffffff;
+  --input-height: 2.8rem;
+
+  /* Text Colors */
+  --text-main: #212529;        /* Near black for "Sports Leagues Finder" */
+  --text-secondary: #6c757d;   /* Medium grey for "Soccer" */
+  --text-muted: #adb5bd;       /* Light grey for "National Football League" */
+  --input-hover-boder: #adb5bd;
+
+  /* Accents & Borders */
+  --border-color: #dee2e6;
+  --primary-blue: #228be6;     /* For the search icon or active states */
+
+  /* Spacing & Radii */
+  --radius-card: 8px;
+  --radius-input: 0.6rem;
+  --font-size-input: 1rem;
+  --container-width: 1280px;
+  --gap-grid: 1.5rem;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif; /* Modern clean font */
+}
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-}
